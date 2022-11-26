@@ -8,13 +8,6 @@ const auth = {
   refreshToken: process.env.REFRESH_TOKEN,
 };
 
-const mailoptions = {
-  from: "ManoaXchange <manoaxchange@gmail.com>",
-  to: "ttran2@hawaii.edu",
-  subject: "Gmail API NodeJS",
-};
-
 module.exports = {
   auth,
-  mailoptions,
 };

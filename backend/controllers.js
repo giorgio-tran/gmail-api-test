@@ -25,9 +25,13 @@ async function sendMail(req, res) {
       },
     });
 
+    const body = req.body;
+
     const mailOptions = {
-      ...CONSTANTS.mailoptions,
-      text: "The Gmail API with NodeJS works",
+      from: "ManoaXchange <manoaxchange@gmail.com>",
+      to: body.to,
+      subject: body.subject,
+      text: body.text,
     };
 
     const result = await transport.sendMail(mailOptions);
